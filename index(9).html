@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Educativo | Ana Clara</title>
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header class="topo">
+        <a href="../index.html#projetos" class="voltar">← Voltar ao portfólio</a>
+        <p class="tag">Aplicação educativa</p>
+        <h1>Quiz de JavaScript</h1>
+        <p>Responda, veja seu desempenho e aprenda com o feedback de cada pergunta.</p>
+    </header>
+
+    <main class="quiz-container">
+        <section class="painel">
+            <div class="info-quiz">
+                <span id="contador">Pergunta 1 de 5</span>
+                <span id="pontuacao">Pontuação: 0</span>
+            </div>
+
+            <div class="barra" aria-hidden="true">
+                <div id="progresso"></div>
+            </div>
+
+            <h2 id="pergunta">Carregando pergunta...</h2>
+            <div id="opcoes" class="opcoes"></div>
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+            <button id="proxima" class="botao" type="button">Próxima pergunta</button>
+        </section>
+    </main>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

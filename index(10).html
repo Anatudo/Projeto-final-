@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos Quadradinhos | Ana Clara</title>
+    <link rel="stylesheet" href="css/jogo.css">
+</head>
+<body>
+    <header class="topo">
+        <a href="../index.html#projetos" class="voltar">← Voltar ao portfólio</a>
+        <p class="tag">Aplicação educativa</p>
+        <h1>Jogo dos Quadradinhos</h1>
+        <p>Escolha uma coordenada e clique nos dois objetos pedidos.</p>
+    </header>
+
+    <main class="container">
+        <section class="painel-status">
+            <div>
+                <span class="label">Instrução</span>
+                <p id="instrucao">Escolha uma coordenada para começar.</p>
+            </div>
+            <div>
+                <span class="label">Acertos</span>
+                <p id="pontuacao">0 de 8</p>
+            </div>
+        </section>
+
+        <section class="area-jogo" aria-label="Tabela de posição e localização">
+            <table class="tabela">
+                <tr>
+                    <th></th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td class="objeto" data-item="avião">✈️</td>
+                    <td class="objeto" data-item="maçã">🍎</td>
+                    <td class="objeto" data-item="formiga">🐜</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td class="objeto" data-item="bola">🏐</td>
+                    <td class="objeto" data-item="abelha">🐝</td>
+                    <td class="objeto" data-item="gato">🐱</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td class="objeto" data-item="xícara">☕</td>
+                    <td class="objeto" data-item="bolo">🎂</td>
+                    <td class="objeto" data-item="rosquinha">🍩</td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td class="objeto" data-item="peixe">🐟</td>
+                    <td class="objeto" data-item="flor">🌸</td>
+                    <td class="objeto" data-item="bola_fut">🏈</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="lista" aria-label="Lista de coordenadas">
+            <button class="coordenada" data-coord="A2" data-itens="bola,flor">A2 → Bola + Flor</button>
+            <button class="coordenada" data-coord="A3" data-itens="bola,xícara">A3 → Bola + Xícara</button>
+            <button class="coordenada" data-coord="A4" data-itens="bolo,peixe">A4 → Bolo + Peixe</button>
+            <button class="coordenada" data-coord="B1" data-itens="bola,maçã">B1 → Bola + Maçã</button>
+            <button class="coordenada" data-coord="B2" data-itens="xícara,abelha">B2 → Xícara + Abelha</button>
+            <button class="coordenada" data-coord="B3" data-itens="bolo,gato">B3 → Bolo + Gato</button>
+            <button class="coordenada" data-coord="B4" data-itens="flor,bolo">B4 → Flor + Bolo</button>
+            <button class="coordenada" data-coord="C1" data-itens="gato,formiga">C1 → Gato + Formiga</button>
+        </section>
+
+        <button id="reiniciar" class="botao" type="button">Reiniciar jogo</button>
+    </main>
+
+    <script src="js/jogo.js"></script>
+</body>
+</html>

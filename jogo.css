@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fundo: #090b17;
+    --card: #ffffff;
+    --texto: #111827;
+    --muted: #64748b;
+    --primaria: #ec4899;
+    --roxo: #8b5cf6;
+    --secundaria: #fbbf24;
+    --correta: #16a34a;
+    --errada: #e11d48;
+    --borda: rgba(255, 255, 255, 0.18);
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, rgba(236, 72, 153, 0.42), transparent 36%),
+        radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.42), transparent 34%),
+        linear-gradient(135deg, #090b17, #111827);
+    color: var(--card);
+}
+
+.topo {
+    text-align: center;
+    padding: 30px 18px 10px;
+}
+
+.voltar {
+    color: var(--secundaria);
+    font-weight: 900;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.tag {
+    color: var(--secundaria);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.topo h1 {
+    font-size: clamp(2.2rem, 6vw, 4.6rem);
+    line-height: 0.95;
+    margin-bottom: 12px;
+}
+
+.topo p:last-child {
+    color: #cbd5e1;
+}
+
+.container {
+    width: min(980px, 92%);
+    margin: 0 auto;
+    padding: 24px 0 50px;
+}
+
+.painel-status {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.painel-status > div,
+.area-jogo,
+.lista {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
+}
+
+.painel-status > div {
+    padding: 18px;
+}
+
+.label {
+    color: var(--secundaria);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+}
+
+#instrucao,
+#pontuacao {
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+.area-jogo {
+    padding: 22px;
+    overflow-x: auto;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.tabela th,
+.tabela td {
+    min-width: 90px;
+    height: 86px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 2.2rem;
+}
+
+.tabela th {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--secundaria);
+    font-size: 1.2rem;
+}
+
+.objeto {
+    background: var(--card);
+    color: var(--texto);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.25s, box-shadow 0.25s;
+}
+
+.objeto:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+}
+
+.objeto.correto {
+    background: #dcfce7;
+    outline: 4px solid var(--correta);
+}
+
+.objeto.errado {
+    background: #ffe4e6;
+    outline: 4px solid var(--errada);
+}
+
+.lista {
+    margin-top: 18px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.coordenada {
+    border: none;
+    border-radius: 18px;
+    padding: 13px 12px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primaria), var(--roxo));
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s, opacity 0.2s;
+}
+
+.coordenada:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.coordenada.ativa {
+    outline: 4px solid var(--secundaria);
+}
+
+.coordenada.concluida {
+    opacity: 0.55;
+    text-decoration: line-through;
+}
+
+.botao {
+    margin-top: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, var(--secundaria), #fb7185);
+    color: #111827;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+@media (max-width: 830px) {
+    .lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .painel-status {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .topo {
+        text-align: left;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+
+    .tabela th,
+    .tabela td {
+        min-width: 70px;
+        height: 70px;
+        font-size: 1.7rem;
+    }
+}

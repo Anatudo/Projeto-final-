@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Ana Clara</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="#inicio">Ana<span>Clara</span></a>
+        <nav class="menu" aria-label="Menu principal">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-conteudo">
+                <p class="tag">Portfólio acadêmico</p>
+                <h1>Ana Clara</h1>
+                <p class="subtitulo">Estudante de ADS, apaixonada por tecnologia, design e criação de experiências digitais.</p>
+                <div class="botoes-hero">
+                    <a class="botao principal" href="#projetos">Ver projetos</a>
+                    <a class="botao secundario" href="#contato">Entrar em contato</a>
+                </div>
+            </div>
+
+            <aside class="card-destaque" aria-label="Resumo profissional">
+                <p class="mini-tag">Resumo</p>
+                <h2>Desenvolvimento + Design</h2>
+                <p>Criação de interfaces com HTML, CSS e JavaScript, unindo organização, visual e funcionalidade.</p>
+                <div class="chips">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>UI Design</span>
+                </div>
+            </aside>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div>
+                <p class="tag">Sobre mim</p>
+                <h2>Informações gerais</h2>
+                <p>
+                    Sou estudante de Análise e Desenvolvimento de Sistemas e tenho interesse em tecnologia,
+                    programação, design e criação de soluções digitais. Este projeto apresenta uma página pessoal,
+                    um formulário com validações, um quiz educativo e um jogo de posição e localização.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <article>
+                    <span>01</span>
+                    <h3>ADS</h3>
+                    <p>Formação voltada para desenvolvimento e solução de problemas.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Design</h3>
+                    <p>Interesse em layouts, identidade visual e experiência do usuário.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Objetivo</h3>
+                    <p>Evoluir como desenvolvedora e criadora digital.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="habilidades">
+            <h2>Habilidades e interesses</h2>
+            <div class="grade-cards">
+                <article>
+                    <div class="icone">💻</div>
+                    <h3>Programação</h3>
+                    <p>Construção de páginas web com HTML, CSS e JavaScript.</p>
+                </article>
+                <article>
+                    <div class="icone">🎨</div>
+                    <h3>Design</h3>
+                    <p>Criação de layouts modernos, organizados e responsivos.</p>
+                </article>
+                <article>
+                    <div class="icone">🚀</div>
+                    <h3>Aprendizado</h3>
+                    <p>Busca constante por evolução prática e profissional.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="projetos" id="projetos">
+            <div class="cabecalho-secao">
+                <p class="tag">Aplicações educativas</p>
+                <h2>Escolha uma experiência</h2>
+                <p>Os projetos abaixo estão interligados com a página inicial e possuem botão para retornar ao portfólio.</p>
+            </div>
+
+            <div class="grade-projetos">
+                <article class="projeto-card quiz-card">
+                    <span class="projeto-icone">🧠</span>
+                    <h3>Quiz de JavaScript</h3>
+                    <p>Responda perguntas sobre HTML, CSS, JavaScript e DOM, com pontuação e feedback.</p>
+                    <a class="botao principal" href="quiz/index.html">Acessar quiz</a>
+                </article>
+
+                <article class="projeto-card game-card">
+                    <span class="projeto-icone">🎮</span>
+                    <h3>Jogo dos Quadradinhos</h3>
+                    <p>Aprenda posição e localização escolhendo coordenadas e encontrando os elementos certos.</p>
+                    <a class="botao principal" href="jogo/index.html">Acessar jogo</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="contato-texto">
+                <p class="tag">Fale comigo</p>
+                <h2>Formulário de contato</h2>
+                <p>
+                    O formulário não envia e-mail de verdade, mas valida os dados antes de simular o envio.
+                </p>
+            </div>
+
+            <form id="formContato" novalidate>
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required minlength="3">
+                    <small class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="data">Data para retorno</label>
+                    <input type="date" id="data" name="data" required>
+                    <small class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" name="idade" placeholder="Ex: 18" min="12" max="120" required>
+                    <small class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="projeto">Projeto</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="parceria">Parceria</option>
+                    </select>
+                    <small class="erro"></small>
+                </div>
+
+                <fieldset class="campo grupo">
+                    <legend>Preferência de contato</legend>
+                    <label><input type="radio" name="preferencia" value="email"> E-mail</label>
+                    <label><input type="radio" name="preferencia" value="whatsapp"> WhatsApp</label>
+                    <small class="erro"></small>
+                </fieldset>
+
+                <div class="campo grupo checkbox-area">
+                    <label>
+                        <input type="checkbox" id="termos" name="termos">
+                        Confirmo que as informações preenchidas estão corretas.
+                    </label>
+                    <small class="erro"></small>
+                </div>
+
+                <div class="campo campo-mensagem">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required minlength="10"></textarea>
+                    <small class="erro"></small>
+                </div>
+
+                <button type="submit" class="botao principal">Enviar mensagem</button>
+                <p id="statusFormulario" class="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Ana Clara | HTML • CSS • JavaScript</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
